@@ -1,83 +1,140 @@
+<div align="center">
+
 # Venkateswara Rao Jannegorla
 
-**Agentic AI Engineer** — I build and ship LLM-powered systems to production.
+### Agentic AI Engineer · Tampa, FL · F-1 STEM OPT
 
-Currently @ USF leading research on **PAAIM** — a multi-agent orchestration system for manufacturing that coordinates 5 specialist agents (safety, quality, maintenance, production, energy) under a machine-readable policy engine with bounded-autonomy constraints, human approval gates, and a Decision Twin for counterfactual impact simulation. Targeting journal publication 2026.
+I don't build demos. I build systems that run in production.
 
-📍 Tampa, FL &nbsp;|&nbsp; F-1 STEM OPT &nbsp;|&nbsp; [Portfolio](https://venky18-portfolio.vercel.app) &nbsp;|&nbsp; [LinkedIn](https://linkedin.com/in/venkateswara-rao-jannegorla-876890241)
+[![Portfolio](https://img.shields.io/badge/Portfolio-venky18--portfolio.vercel.app-black?style=flat-square&logo=vercel)](https://venky18-portfolio.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/venkateswara-rao-jannegorla-876890241)
+[![PyPI](https://img.shields.io/pypi/dm/docuweave?label=DocuWeave%20downloads%2Fmo&style=flat-square&color=blue)](https://pypi.org/project/docuweave/)
 
----
-
-## What I've shipped
-
-### 🤖 [LeadOps — Autonomous Lead Qualification Agent](https://github.com/VenkateswaraRao18/leadops-dashboard)
-`LangGraph` `Gemini` `FastAPI` `Next.js` `Engram` `Langfuse` `PostgreSQL` `Render`
-
-Inbound leads hit a FastAPI webhook → pass through a LangGraph state machine (memory load → intake → scoring → routing → memory save) → get scored 0–100 by Gemini on intent and company context → auto-routed to hot/warm/cold workflows. Returning leads are re-scored with full prior interaction history injected via Engram. Every node traced in Langfuse with latency, token counts, and outputs. Live on Render with a Next.js dashboard.
+</div>
 
 ---
 
-### 🏢 [TechCorp Internal Knowledge Assistant](https://github.com/VenkateswaraRao18/Enterprise-Rag-Assistant) — [Live Demo](https://dthh8ilmdbf8n.cloudfront.net)
-`FastAPI` `Qdrant` `AWS Fargate` `CloudFront` `CI/CD` `Gemini`
+## What I'm building right now
 
-Production RAG system over Slack, Jira, runbooks, and incident data. ACL/RBAC-aware hybrid retrieval (BM25 + dense + RRF), citation-enforced generation, and security guardrails — **94% retrieval accuracy**. Deployed on AWS Fargate + CloudFront via GitHub Actions CI/CD with latency and guardrail-violation monitoring.
-
----
-
-### 🔧 [IT Ops RAG Copilot](https://github.com/VenkateswaraRao18/agentic_rag) — [Live Demo](https://agentic-rag-seven.vercel.app)
-`LangGraph` `LangChain` `FastAPI` `Next.js` `FAISS` `AWS Bedrock` `Vercel`
-
-Full-stack agentic ops copilot: LangGraph agent with dynamic routing, retrieval over FAISS-embedded docs, tool calls, and cited responses. FastAPI backend + Next.js chat UI with real-time streaming. Bedrock-optional fallback and prompt-level guardrails.
+**PAAIM** at USF — a multi-agent system for manufacturing where 5 specialist agents (safety, quality, maintenance, production, energy) coordinate under a machine-readable policy engine. Bounded-autonomy constraints, conflict resolution, human approval gates, a Decision Twin for counterfactual impact simulation (downtime, OEE, scrap, order risk), and a Red-Team Agent that challenges the system's own decisions before they execute. Experimental baselines measure prioritization accuracy, policy violation rate, and decision latency. Targeting journal publication 2026.
 
 ---
 
-### 📦 [DocuWeave — Open-Source PyPI Library](https://github.com/VenkateswaraRao18/docuweave) — [PyPI](https://pypi.org/project/docuweave/)
-`Python` `RAG` `PDF Parsing` `FAISS` `Pinecone` `Qdrant`
+## Shipped
 
-Layout-aware PDF ingestion pipeline for RAG workloads. **2.9× faster than LangChain** (22s vs 65s). Configurable chunking (fixed-size, sliding-window, semantic boundary) with unified FAISS, Pinecone, and Qdrant integrations.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-![PyPI Downloads](https://img.shields.io/pypi/dm/docuweave?label=monthly%20downloads&color=blue)
-![PyPI Version](https://img.shields.io/pypi/v/docuweave)
+### 🤖 [LeadOps](https://github.com/VenkateswaraRao18/leadops-dashboard)
+**Autonomous lead qualification agent — live on Render**
 
----
+Inbound leads → FastAPI webhook → LangGraph state machine → Gemini scores 0–100 → auto-routed to hot/warm/cold workflows. Returning leads re-scored with full history from Engram. Every node traced in Langfuse. Next.js dashboard shows the live pipeline.
 
-### 🧠 [Engram — Long-Term Memory Engine](https://github.com/VenkateswaraRao18/Engram)
-`Python` `Neo4j` `Qdrant` `FAISS` `sqlite-vec` `Temporal Knowledge Graph`
+`LangGraph` `Gemini` `Langfuse` `Engram` `FastAPI` `Next.js` `Render`
 
-Memory engine combining vector search (Qdrant, FAISS, sqlite-vec) with a Neo4j temporal knowledge graph fused via RRF. Implements temporal fact resolution, contradiction detection, importance-weighted memory decay, and episodic summarization for correct multi-session LLM state. **Currently powering LeadOps in production.**
+</td>
+<td width="50%" valign="top">
 
----
+### 🏢 [TechCorp Knowledge Assistant](https://github.com/VenkateswaraRao18/Enterprise-Rag-Assistant) · [Live](https://dthh8ilmdbf8n.cloudfront.net)
+**Production RAG — 94% retrieval accuracy**
 
-### 🏭 [Manufacturing Process Intelligence](https://github.com/VenkateswaraRao18/manufacturing-process-intelligence) — [Live Demo](https://manufacturing-process-intelligence-v.streamlit.app/)
+Over Slack, Jira, runbooks, and incident data. ACL/RBAC-aware hybrid retrieval (BM25 + dense + RRF), citation-enforced generation, security guardrails. AWS Fargate + CloudFront + GitHub Actions CI/CD + operational monitoring.
+
+`FastAPI` `Qdrant` `AWS Fargate` `CloudFront` `CI/CD`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🔧 [IT Ops RAG Copilot](https://github.com/VenkateswaraRao18/agentic_rag) · [Live](https://agentic-rag-seven.vercel.app)
+**Full-stack agentic system — deployed on Vercel**
+
+LangGraph agent with dynamic routing, FAISS retrieval, tool calls, and cited responses. Next.js chat UI with real-time streaming. Bedrock-optional fallback and guardrails.
+
+`LangGraph` `LangChain` `FAISS` `FastAPI` `Next.js` `Bedrock`
+
+</td>
+<td width="50%" valign="top">
+
+### 🏭 [Manufacturing Process Intelligence](https://github.com/VenkateswaraRao18/manufacturing-process-intelligence) · [Live](https://manufacturing-process-intelligence-v.streamlit.app/)
+**End-to-end ML on 143K-row real automotive dataset**
+
+XGBoost multi-label classifier (76.9% micro-precision, 325 labels), variant discovery via PCA + KMeans + UMAP, dual-signal anomaly detector. FastAPI + Streamlit + Docker.
+
 `XGBoost` `scikit-learn` `Streamlit` `FastAPI` `Docker` `UMAP`
 
-End-to-end ML system on a real automotive assembly dataset (143K rows, 2,869 vehicles, 512 features): multi-label classifier at **76.9% micro-precision** across 325 labels, variant discovery via PCA + KMeans + UMAP, and dual-signal anomaly detector (Isolation Forest + model-deviation scoring). Deployed as Streamlit dashboard + FastAPI REST API in Docker.
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 📦 [DocuWeave](https://github.com/VenkateswaraRao18/docuweave) · [PyPI](https://pypi.org/project/docuweave/)
+**Open-source PDF ingestion library · 500+ downloads/month**
+
+2.9× faster than LangChain (22s vs 65s). Layout-aware chunking, unified FAISS / Pinecone / Qdrant integrations. Published on PyPI.
+
+![Downloads](https://img.shields.io/pypi/dm/docuweave?style=flat-square&color=blue)
+![Version](https://img.shields.io/pypi/v/docuweave?style=flat-square)
+
+`Python` `RAG` `PDF Parsing` `Vector Search`
+
+</td>
+<td width="50%" valign="top">
+
+### 🧠 [Engram](https://github.com/VenkateswaraRao18/Engram)
+**Long-term memory engine — powering LeadOps in production**
+
+Vector search + Neo4j temporal knowledge graph fused via RRF. Temporal fact resolution, contradiction detection, importance-weighted memory decay, and episodic summarization. Agents remember correctly across sessions.
+
+`Neo4j` `Qdrant` `FAISS` `sqlite-vec` `Temporal KG`
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## Stack
 
-```
-Agentic:     LangGraph · LangChain · LlamaIndex · MCP · CrewAI
-LLM APIs:    OpenAI · Anthropic Claude · Gemini · AWS Bedrock · LLaMA
-RAG:         Hybrid Search (BM25 + Dense) · RRF · FAISS · Qdrant · Pinecone · Weaviate
-Eval:        Langfuse · LLM Eval Frameworks · Guardrails · Faithfulness Scoring
-Backend:     FastAPI · Flask · Python · PostgreSQL · Docker
-Frontend:    Next.js · React · TypeScript
-Cloud:       AWS (ECS · Fargate · CloudFront) · Render · Vercel · GitHub Actions
-ML:          PyTorch · HuggingFace · scikit-learn · XGBoost · LoRA · PEFT
-```
+| Layer | Tools |
+|---|---|
+| **Agents & Orchestration** | LangGraph · LangChain · LlamaIndex · MCP · CrewAI |
+| **LLM APIs** | OpenAI · Anthropic Claude · Gemini · AWS Bedrock · LLaMA |
+| **RAG & Retrieval** | Hybrid Search · BM25 + Dense · RRF · FAISS · Qdrant · Pinecone · Weaviate |
+| **Eval & Observability** | Langfuse · Guardrails · Faithfulness Scoring · LLM Eval Frameworks |
+| **Backend & APIs** | FastAPI · Flask · PostgreSQL · Docker · Python |
+| **Frontend** | Next.js · React · TypeScript |
+| **Cloud & DevOps** | AWS (ECS · Fargate · CloudFront) · Render · Vercel · GitHub Actions |
+| **ML & Training** | PyTorch · HuggingFace · scikit-learn · XGBoost · LoRA · PEFT |
 
 ---
 
-## GitHub Stats
+## Numbers
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=VenkateswaraRao18&show_icons=true&theme=dark&hide_border=true&count_private=true)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=VenkateswaraRao18&layout=compact&theme=dark&hide_border=true)
+```
+500+    DocuWeave monthly PyPI downloads
+94%     Retrieval accuracy — TechCorp RAG system
+76.9%   Micro-precision — Manufacturing ML classifier (325 labels)
+2.9×    Faster PDF ingestion than LangChain
+30%+    Hallucination reduction — USF RAG research
+38%     Inference latency reduction — production NLP system
+```
 
 ---
 
 ## Publications
 
-- **Phishing Detection: A Predictive Model for Cyber Security** — IEEE, 2023
-- **Secure Document Storage Using Web3** — Scopus, 2024
+**Phishing Detection: A Predictive Model for Cyber Security** · IEEE · 2023  
+**Secure Document Storage Using Web3** · Scopus · 2024
+
+---
+
+<div align="center">
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=VenkateswaraRao18&show_icons=true&theme=dark&hide_border=true&count_private=true&hide_title=true)
+
+**Open to AI Engineer roles · Tampa, FL or Remote · No sponsorship needed (STEM OPT)**
+
+</div>
