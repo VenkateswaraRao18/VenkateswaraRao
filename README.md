@@ -1,177 +1,83 @@
-# 👋 Hi, I’m Venkateswara Rao Jannegorla
+# Venkateswara Rao Jannegorla
 
-## 🧠 Data Scientist | AI Engineer | Aspiring AI Researcher  
-**Focused on Machine Learning → Deep Learning → LLMs → Agentic AI**
+**Agentic AI Engineer** — I build and ship LLM-powered systems to production.
 
-I am a **data science–driven AI engineer** transitioning fully into **advanced machine learning, large language models, and autonomous AI systems**. My long-term goal is to contribute to **cutting-edge AI research and scalable intelligent systems** at **FAANG-level organizations, AI startups, or through MS/PhD research**.
+Currently @ USF leading research on **PAAIM** — a multi-agent orchestration system for manufacturing that coordinates 5 specialist agents (safety, quality, maintenance, production, energy) under a machine-readable policy engine with bounded-autonomy constraints, human approval gates, and a Decision Twin for counterfactual impact simulation. Targeting journal publication 2026.
 
-I am particularly interested in **representation learning, reasoning with LLMs, autonomous agents, and AI alignment**, and in bridging **theory with real-world impact**.
-
----
-
-## 🎯 Research & Industry Interests
-- Machine Learning & Statistical Learning Theory  
-- Deep Learning & Representation Learning  
-- Large Language Models (LLMs)  
-- AI Agents & Agentic AI Systems  
-- Multi-Agent Systems & Autonomous Reasoning  
-- Applied AI for Real-World Decision Making  
+📍 Tampa, FL &nbsp;|&nbsp; F-1 STEM OPT &nbsp;|&nbsp; [Portfolio](https://venky18-portfolio.vercel.app) &nbsp;|&nbsp; [LinkedIn](https://linkedin.com/in/venkateswara-rao-jannegorla-876890241)
 
 ---
 
-## 🧠 Core Technical Expertise
+## What I've shipped
 
-### 📊 Data Science & Statistical Foundations
-- Exploratory Data Analysis (EDA)  
-- Feature Engineering & Dimensionality Reduction  
-- Probability, Statistics & Linear Algebra  
-- Hypothesis Testing & Experiment Design  
+### 🤖 [LeadOps — Autonomous Lead Qualification Agent](https://github.com/VenkateswaraRao18/leadops-dashboard)
+`LangGraph` `Gemini` `FastAPI` `Next.js` `Engram` `Langfuse` `PostgreSQL` `Render`
 
-**Tools:** `Python`, `NumPy`, `Pandas`, `SciPy`, `Matplotlib`, `Seaborn`
+Inbound leads hit a FastAPI webhook → pass through a LangGraph state machine (memory load → intake → scoring → routing → memory save) → get scored 0–100 by Gemini on intent and company context → auto-routed to hot/warm/cold workflows. Returning leads are re-scored with full prior interaction history injected via Engram. Every node traced in Langfuse with latency, token counts, and outputs. Live on Render with a Next.js dashboard.
 
 ---
 
-### 🤖 Machine Learning
-- Supervised Learning (Regression, Classification)  
-- Unsupervised Learning (Clustering, Topic Modeling)  
-- Ensemble Methods & Model Optimization  
-- Bias-Variance Tradeoff & Generalization  
+### 🏢 [TechCorp Internal Knowledge Assistant](https://github.com/VenkateswaraRao18/Enterprise-Rag-Assistant) — [Live Demo](https://dthh8ilmdbf8n.cloudfront.net)
+`FastAPI` `Qdrant` `AWS Fargate` `CloudFront` `CI/CD` `Gemini`
 
-**Libraries:** `Scikit-learn`, `XGBoost`, `LightGBM`
+Production RAG system over Slack, Jira, runbooks, and incident data. ACL/RBAC-aware hybrid retrieval (BM25 + dense + RRF), citation-enforced generation, and security guardrails — **94% retrieval accuracy**. Deployed on AWS Fargate + CloudFront via GitHub Actions CI/CD with latency and guardrail-violation monitoring.
 
 ---
 
-### 🧬 Deep Learning
-- Neural Networks & Backpropagation  
-- CNNs for Vision Tasks  
-- RNNs, LSTMs & Sequence Modeling  
-- Transformers & Attention Mechanisms  
+### 🔧 [IT Ops RAG Copilot](https://github.com/VenkateswaraRao18/agentic_rag) — [Live Demo](https://agentic-rag-seven.vercel.app)
+`LangGraph` `LangChain` `FastAPI` `Next.js` `FAISS` `AWS Bedrock` `Vercel`
 
-**Frameworks:** `PyTorch`, `TensorFlow`, `Keras`
+Full-stack agentic ops copilot: LangGraph agent with dynamic routing, retrieval over FAISS-embedded docs, tool calls, and cited responses. FastAPI backend + Next.js chat UI with real-time streaming. Bedrock-optional fallback and prompt-level guardrails.
 
 ---
 
-### 🧠 Large Language Models (LLMs)
-- Prompt Engineering & Chain-of-Thought Reasoning  
-- Fine-Tuning & Parameter-Efficient Training (LoRA, PEFT)  
-- Retrieval-Augmented Generation (RAG)  
-- Embeddings, Vector Databases & Semantic Search  
+### 📦 [DocuWeave — Open-Source PyPI Library](https://github.com/VenkateswaraRao18/docuweave) — [PyPI](https://pypi.org/project/docuweave/)
+`Python` `RAG` `PDF Parsing` `FAISS` `Pinecone` `Qdrant`
 
-**Ecosystem:** `Hugging Face`, `OpenAI API`, `LangChain`, `LlamaIndex`, `FAISS`
+Layout-aware PDF ingestion pipeline for RAG workloads. **2.9× faster than LangChain** (22s vs 65s). Configurable chunking (fixed-size, sliding-window, semantic boundary) with unified FAISS, Pinecone, and Qdrant integrations.
 
----
-
-### 🤝 AI Agents & Agentic AI
-- Autonomous & Goal-Driven Agents  
-- Tool-Using LLM Agents  
-- Multi-Agent Collaboration & Planning  
-- Memory, Reflection & Long-Horizon Reasoning  
-
-**Frameworks & Concepts:**  
-`LangGraph`, `CrewAI`, `AutoGPT Architectures`, `ReAct`, `Tree-of-Thoughts`
+![PyPI Downloads](https://img.shields.io/pypi/dm/docuweave?label=monthly%20downloads&color=blue)
+![PyPI Version](https://img.shields.io/pypi/v/docuweave)
 
 ---
 
-### 🚀 MLOps & Scalable AI Systems
-- Model Experiment Tracking & Versioning  
-- Model Deployment & APIs  
-- Monitoring, Drift Detection & Evaluation  
-- Reproducible Research Pipelines  
+### 🧠 [Engram — Long-Term Memory Engine](https://github.com/VenkateswaraRao18/Engram)
+`Python` `Neo4j` `Qdrant` `FAISS` `sqlite-vec` `Temporal Knowledge Graph`
 
-**Tools:** `MLflow`, `Docker`, `FastAPI`, `Git`, `Cloud Platforms`
+Memory engine combining vector search (Qdrant, FAISS, sqlite-vec) with a Neo4j temporal knowledge graph fused via RRF. Implements temporal fact resolution, contradiction detection, importance-weighted memory decay, and episodic summarization for correct multi-session LLM state. **Currently powering LeadOps in production.**
 
 ---
 
-## 🧩 Selected Projects
+### 🏭 [Manufacturing Process Intelligence](https://github.com/VenkateswaraRao18/manufacturing-process-intelligence) — [Live Demo](https://manufacturing-process-intelligence-v.streamlit.app/)
+`XGBoost` `scikit-learn` `Streamlit` `FastAPI` `Docker` `UMAP`
 
-### 🔹 Machine Learning
-- **End-to-End ML Pipeline:** Data ingestion → feature engineering → model training → evaluation  
-- **Customer Segmentation:** K-Means & Hierarchical clustering with business insights  
-- **Predictive Modeling:** Regression & classification with explainability (SHAP)
+End-to-end ML system on a real automotive assembly dataset (143K rows, 2,869 vehicles, 512 features): multi-label classifier at **76.9% micro-precision** across 325 labels, variant discovery via PCA + KMeans + UMAP, and dual-signal anomaly detector (Isolation Forest + model-deviation scoring). Deployed as Streamlit dashboard + FastAPI REST API in Docker.
 
 ---
 
-### 🔹 Deep Learning
-- **Image Classification with CNNs:** Custom architectures & transfer learning  
-- **Time-Series Forecasting:** LSTM-based models for sequential prediction  
-- **Transformer from Scratch:** Implemented attention & encoder-decoder logic
+## Stack
+
+```
+Agentic:     LangGraph · LangChain · LlamaIndex · MCP · CrewAI
+LLM APIs:    OpenAI · Anthropic Claude · Gemini · AWS Bedrock · LLaMA
+RAG:         Hybrid Search (BM25 + Dense) · RRF · FAISS · Qdrant · Pinecone · Weaviate
+Eval:        Langfuse · LLM Eval Frameworks · Guardrails · Faithfulness Scoring
+Backend:     FastAPI · Flask · Python · PostgreSQL · Docker
+Frontend:    Next.js · React · TypeScript
+Cloud:       AWS (ECS · Fargate · CloudFront) · Render · Vercel · GitHub Actions
+ML:          PyTorch · HuggingFace · scikit-learn · XGBoost · LoRA · PEFT
+```
 
 ---
 
-### 🔹 LLMs
-- **RAG-Based QA System:** Document ingestion, embeddings, vector search & LLM inference  
-- **LLM Fine-Tuning:** Instruction-tuned open-source models using Hugging Face  
-- **Semantic Search Engine:** Embedding-based retrieval over large corpora
+## GitHub Stats
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=VenkateswaraRao18&show_icons=true&theme=dark&hide_border=true&count_private=true)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=VenkateswaraRao18&layout=compact&theme=dark&hide_border=true)
 
 ---
 
-### 🔹 AI Agents & Agentic AI
-- **Autonomous Research Agent:** Multi-tool agent for literature review & summarization  
-- **Multi-Agent Task Solver:** Planner-Executor-Critic architecture  
-- **Agent Memory System:** Long-term memory + reflection for improved reasoning  
+## Publications
 
----
-
-## 🧠 Learning Roadmap → Agentic AI
-
-### Phase 1: Foundations
-- Python, Data Structures & Algorithms  
-- Linear Algebra, Probability & Statistics  
-- Exploratory Data Analysis  
-
-### Phase 2: Machine Learning
-- Classical ML Algorithms  
-- Model Evaluation & Optimization  
-- Feature Engineering  
-
-### Phase 3: Deep Learning
-- Neural Networks & Backpropagation  
-- CNNs, RNNs, Transformers  
-- Representation Learning  
-
-### Phase 4: Large Language Models
-- Transformers in Depth  
-- Prompt Engineering & Fine-Tuning  
-- RAG & Vector Databases  
-
-### Phase 5: Agentic AI
-- ReAct & Tool-Using Agents  
-- Multi-Agent Systems  
-- Planning, Memory & Reflection  
-- Autonomous Decision-Making  
-
----
-
-## 🌐 Socials
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/venkateswararaojannegorla)
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/venkyjannegorla)
-
----
-
-## 💻 Tech Stack (AI & Research)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![PyTorch](https://img.shields.io/badge/pytorch-%23EE4C2C.svg?style=for-the-badge&logo=pytorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/tensorflow-%23FF6F00.svg?style=for-the-badge&logo=tensorflow&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
-![Docker](https://img.shields.io/badge/docker-0db7ed?style=for-the-badge&logo=docker&logoColor=white)
-
----
-
-## 📊 GitHub Stats
-![](https://github-readme-stats.vercel.app/api?username=venkateswaraRao18&theme=dark)
-![](https://github-readme-streak-stats.herokuapp.com/?user=venkateswaraRao18&theme=dark)
-
----
-
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=venkateswaraRao18&theme=radical)
-
----
-
-### ✍️ Research-Inspired Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
-
----
-
-<!-- Optimized for FAANG, AI Startups, MS/PhD, and Agentic AI Research -->
+- **Phishing Detection: A Predictive Model for Cyber Security** — IEEE, 2023
+- **Secure Document Storage Using Web3** — Scopus, 2024
