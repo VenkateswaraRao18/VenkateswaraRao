@@ -118,16 +118,7 @@ Vector search + Neo4j temporal knowledge graph fused via RRF. Temporal fact reso
 94%     Retrieval accuracy — TechCorp RAG system
 76.9%   Micro-precision — Manufacturing ML classifier (325 labels)
 2.9×    Faster PDF ingestion than LangChain
-30%+    Hallucination reduction — USF RAG research
-38%     Inference latency reduction — production NLP system
 ```
-
----
-
-## Publications
-
-**Phishing Detection: A Predictive Model for Cyber Security** · IEEE · 2023  
-**Secure Document Storage Using Web3** · Scopus · 2024
 
 ---
 
